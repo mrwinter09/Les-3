@@ -1,1 +1,84 @@
 /*Maak hier jouw CSS!*/
+/* https://codepen.io/stacy/full/ObmjeZ codepen voorbeeld bij oppakken */
+/*dit is een mobile grid*/
+.container {
+    row-gap: 16px;
+    column-gap: 16px;
+    background-color: #ededed;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside-1"
+    "aside-2"
+    "aside-3"
+    "."
+    "footer";
+}
+
+
+.grit-item { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    background-color: #3b322c;
+    grid-area: header;
+}
+
+#main {
+    background-color: #4e6151;
+    grid-area: main;
+}
+
+#aside-1 {
+    background-color: #5e8c61;
+    grid-area: aside-1;
+}
+
+#aside-2 {
+    background-color: #5e8c61;
+    grid-area: aside-2;
+}
+
+#aside-3 {
+    background-color: #5e8c61;
+    grid-area: aside-3;
+}
+
+#footer {
+    background-color: #72bda3;
+    grid-area: footer;
+}
+
+/*dit is een mobile grid*/
+.container {
+    background-color: #ededed;
+}
+
+@media screen and (min-width: 576px) {
+
+    /*dit is een desktop grid*/
+.container {
+    display: grid;
+    background-color: #ededed;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 240px 100px auto 50px;
+    grid-template-areas: 
+    "header aside-1 aside-1"
+    "main aside-1 aside-1"
+    "main aside-3 aside-2"
+    "main aside-3 ."
+    "footer footer footer";
+    row-gap: 16px;
+    column-gap: 16px;
+    }
+
+}
+
+
